@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ehfe6t631yks"]
 
-[ext_resource type="Script" uid="uid://bnfsljduuaqpf" path="res://hud.gd" id="1_rd3kb"]
+[ext_resource type="Script" uid="uid://bnfsljduuaqpf" path="res://scripts/hud.gd" id="1_rd3kb"]
 [ext_resource type="Texture2D" uid="uid://bjxw6fa05f5nq" path="res://assets/sprites/character_panel.png" id="2_y5tme"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_18exe"]

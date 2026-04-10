@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://0oldwdleuw7w"]
+
+[ext_resource type="Script" uid="uid://bos6ticgs4s0p" path="res://scripts/key.gd" id="1_fwddk"]
+[ext_resource type="Texture2D" uid="uid://5p08twhqwlkr" path="res://assets/Objects.png" id="2_g24x2"]
+[ext_resource type="AudioStream" uid="uid://csejgqd1ij4lx" path="res://assets/audio/freesound_community-money-pickup-2-89563.mp3" id="3_g24x2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ce64k"]
+atlas = ExtResource("2_g24x2")
+region = Rect2(50, 0, 12, 7)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a3shg"]
+radius = 7.0
+
+[node name="Key" type="Area2D" unique_id=758842919]
+collision_mask = 8
+script = ExtResource("1_fwddk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1565498423]
+texture = SubResource("AtlasTexture_ce64k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1572987681]
+shape = SubResource("CircleShape2D_a3shg")
+
+[node name="PickupSound" type="AudioStreamPlayer2D" parent="." unique_id=1354089383]
+stream = ExtResource("3_g24x2")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

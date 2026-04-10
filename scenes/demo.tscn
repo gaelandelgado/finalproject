@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bptxydb0rornf"]
 
-[ext_resource type="Script" uid="uid://j3kwllhu4ung" path="res://scenes/demo.gd" id="1_5fme1"]
+[ext_resource type="Script" uid="uid://j3kwllhu4ung" path="res://scripts/demo.gd" id="1_5fme1"]
 [ext_resource type="PackedScene" uid="uid://4ausc7cfncmx" path="res://scenes/Player/player.tscn" id="1_tqfh0"]
 [ext_resource type="Texture2D" uid="uid://du26xcwemqdqa" path="res://assets/tilesets/Dungeon/walls_floor.png" id="2_ba4lm"]
 [ext_resource type="Texture2D" uid="uid://cf7r3tce3vfyp" path="res://assets/tilesets/Dungeon/decorative_cracks_coasts_animation.png" id="4_7qr1p"]

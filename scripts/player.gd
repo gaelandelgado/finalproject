@@ -21,6 +21,7 @@ var was_running_when_attacked = false
 var footstep_index = 0
 var last_hurt_sound = 0
 var can_regen_stamina = true
+var has_key = false
 
 var max_health = 10
 var health = 10
@@ -153,3 +154,7 @@ func take_damage(amount):
 	hurt_sounds[last_hurt_sound].play()
 	if health <= 0:
 		is_dead = true
+
+
+func _on_lv_2_transport_body_entered(body):
+	pass # Replace with function body.

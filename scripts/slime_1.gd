@@ -15,6 +15,9 @@ var state = State.IDLE
 @onready var footstep_timer = $FootstepTimer
 @onready var hurt_sounds = [$HurtSound1, $HurtSound2]
 
+@export var drops_key = false
+@onready var key_scene = preload("res://scenes/Dungeon/key.tscn")
+
 var direction = Vector2.ZERO
 var is_attacking = false
 var is_hurt = false
@@ -123,6 +126,10 @@ func _on_animated_sprite_2d_animation_finished():
 	if is_hurt:
 		is_hurt = false
 	if is_dead:
+		if drops_key:
+			var key = key_scene.instantiate()
+			key.global_position = global_position
+			get_parent().add_child(key)
 		queue_free()
 
 func _on_attack_hitbox_area_entered(area):
